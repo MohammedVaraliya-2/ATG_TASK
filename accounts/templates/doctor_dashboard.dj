@@ -1,0 +1,6 @@
+{% extends 'base.dj' %}
+
+{% block content %}
+  <h2>Doctor Dashboard</h2>
+  <!-- Add content for the doctor dashboard here -->
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.dj' %}
+
+{% block content %}
+  <h2>Signup</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p>User type:</p>
+    <input type="radio" id="patient" name="user_type" value="patient">
+    <label for="patient">Patient</label><br>
+    <input type="radio" id="doctor" name="user_type" value="doctor">
+    <label for="doctor">Doctor</label><br>
+    <button type="submit">Sign up</button>
+  </form>
+{% endblock %}

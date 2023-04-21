@@ -1,0 +1,17 @@
+{% extends 'base.dj' %}
+
+{% block content %}
+{% if messages %}
+{% for message in messages %}
+  <div class="alert alert-{{ message.tags }}">
+    {{ message }}
+  </div>
+{% endfor %}
+{% endif %}
+  <h1>Welcome to the Patient/Doctor Dashboard</h1>
+  <p>Choose an option:</p>
+  <ul>
+      <li><a href="{% url 'signup' %}">Sign up</a></li>
+      <li><a href="{% url 'login' %}">Log in</a></li>
+  </ul>
+{% endblock %}

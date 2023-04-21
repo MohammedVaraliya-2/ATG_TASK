@@ -1,0 +1,13 @@
+{% extends 'base.dj' %}
+
+{% block content %}
+  <h2>Patient Dashboard</h2>
+  <p>First Name: {{ user.first_name }}</p>
+  <p>Last Name: {{ user.last_name }}</p>
+  <p>Profile Picture: {{ user_profile.profile_picture.url }}</p>
+  <p>Email: {{ user.email }}</p>
+  <p>Address Line 1: {{ user_profile.address_line1 }}</p>
+  <p>City: {{ user_profile.city }}</p>
+  <p>State: {{ user_profile.state }}</p>
+  <p>Pincode: {{ user_profile.pincode }}</p>
+{% endblock %}
