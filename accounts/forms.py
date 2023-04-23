@@ -30,6 +30,6 @@ class SignupForm(UserCreationForm):
             image_file = self.cleaned_data['profile_picture']
             file_extension = image_file.name.split('.')[-1]
             file_name = f'{user.username}.{file_extension}'
-            user_profile.profile_picture.save(file_name, ContentFile(image_file.read()), save=False)
+            user_profile.profile_picture.save(file_name, ContentFile(image_file.read()), save=True)
         user_profile.save()
         return user

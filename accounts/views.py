@@ -29,7 +29,7 @@ def signup(request):
             else:
                 profile.is_doctor = True
             profile.save()
-            messages.success(request, 'User created successfully!')
+            messages.success(request, 'Your account has been created! You are now able to log in.')
             return redirect('home')
     else:
         form = SignupForm()
